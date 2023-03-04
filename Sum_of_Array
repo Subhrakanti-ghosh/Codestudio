@@ -1,0 +1,16 @@
+public class Solution {
+
+	public static int sum(int input[]) {
+	
+		return fun(input,input.length);
+		
+	}
+	public static int fun(int input[], int n)
+	{
+		if(n == 0)
+		{
+			return 0;
+		}
+		return input[n-1] + fun(input,n-1);
+	}
+}
