@@ -1,0 +1,28 @@
+public class Solution {
+
+	public static boolean reccheck(int input[],int x, int idx)
+	{
+			if(idx == input.length)
+		{
+			return false;
+		}
+		if(x == input[idx])
+		{
+			return true;
+		}
+		return reccheck(input,x,idx + 1);
+	}
+	
+	public static boolean checkNumber(int input[], int x) {
+		/* Your class should be named Solution
+		 * Don't write main().
+		 * Don't read input, it is passed as function argument.
+		 * Return output and don't print it.
+	 	 * Taking input and printing output is handled automatically.
+		*/
+	  	int idx = 0;
+		  boolean ans = reccheck(input,x,idx);
+		  return ans;
+		
+	}
+}
